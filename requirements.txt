@@ -1,0 +1,4 @@
+pymysql
+djangorestframework
+markdown
+django-filter
