@@ -1,3 +1,6 @@
+django
+cryptography
+tzdata
 pymysql
 djangorestframework
 markdown

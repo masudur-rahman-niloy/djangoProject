@@ -5,8 +5,10 @@ RUN apt install python3 python3-dev python3-pip -y
 WORKDIR src
 
 COPY . .
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt && chmod +x start_server.sh
 
-RUN python manage.py migrate
+#RUN python3 manage.py migrate
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+#CMD ["python3", "manage.py migrate", "manage.py runserver 0.0.0.0:8000"]
+CMD ["/src/start_server.sh"]
+
